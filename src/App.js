@@ -64,7 +64,8 @@ export default class App extends Component {
           <input type="text" value={this.state.term} onChange={this.onChange} />
           <button>Submit</button>
         </form>
-        <List items={this.state.items} />
+        {<List items={this.state.items} />}
+        {/* <List items={this.state.term} /> */}
       </div>
     );
   }
