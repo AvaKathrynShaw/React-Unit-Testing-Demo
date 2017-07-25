@@ -6,7 +6,7 @@ import { getUser } from './api/github'
 
 
 //MOCK TESTING ------------
-/*
+
 const renderLine = (user, key) => <li key={key}><b>{key}</b>: {user[key]}</li>
 
 export default class App extends Component {
@@ -16,7 +16,7 @@ export default class App extends Component {
   }
 
   componentDidMount () {
-    getUser('vnglst').then(data => {
+    getUser('vnglst2').then(data => {
       this.setState({ user: data.entity })
     })
   }
@@ -35,9 +35,9 @@ export default class App extends Component {
     )
   }
 }
-*/
 
 
+/*
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -65,8 +65,10 @@ export default class App extends Component {
           <button>Submit</button>
         </form>
         {<List items={this.state.items} />}
-        {/* <List items={this.state.term} /> */}
+        {<List items={this.state.term} />}
       </div>
     );
   }
 }
+
+*/
