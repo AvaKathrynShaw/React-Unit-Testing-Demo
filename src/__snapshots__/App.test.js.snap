@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: App should add an item based on the value in the state 1`] = `
+<div>
+  <form
+    className="App"
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+  <List
+    items={
+      Array [
+        "Learn react",
+        "rest",
+        "go out",
+        "",
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`Component: App should match its empty snapshot 1`] = `
+<div>
+  <form
+    className="App"
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+  <ul />
+</div>
+`;
+
+exports[`Component: App should pass a selected value to the onChange function 1`] = `
+<div>
+  <form
+    className="App"
+    onSubmit={[Function]}
+  >
+    <input
+      onChange={[Function]}
+      type="text"
+      value="Change function"
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+  <List
+    items={Array []}
+  />
+</div>
+`;

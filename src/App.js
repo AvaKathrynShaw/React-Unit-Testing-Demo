@@ -1,38 +1,15 @@
-/*
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
-
-export default App;
-
-*/
-
 
 import React, { Component } from 'react'
 import './App.css'
+import List from './List'
 import { getUser } from './api/github'
 
+
+//MOCK TESTING ------------
+/*
 const renderLine = (user, key) => <li key={key}><b>{key}</b>: {user[key]}</li>
 
-class App extends Component {
+export default class App extends Component {
   constructor (props) {
     super(props)
     this.state = { user: {} }
@@ -58,5 +35,37 @@ class App extends Component {
     )
   }
 }
+*/
 
-export default App
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      term: '',
+      items: []
+    };
+  }
+
+  onChange = (event) => {
+    this.setState({ term: event.target.value });
+  }
+
+  onSubmit = (event) => {
+    event.preventDefault();
+    this.state.items.push(this.state.term);
+    this.setState({ term: '', items: this.state.items });
+  }
+
+  render() {
+    return (
+      <div>
+        <form className="App" onSubmit={this.onSubmit}>
+          <input type="text" value={this.state.term} onChange={this.onChange} />
+          <button>Submit</button>
+        </form>
+        <List items={this.state.items} />
+      </div>
+    );
+  }
+}
