@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 const github = require('../github')
-jest.mock(‘../request’)
+jest.mock('../request')
 
 // A simple example test
 describe('#getUser() using Promises', () => {
